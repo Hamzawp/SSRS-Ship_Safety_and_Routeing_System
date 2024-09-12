@@ -23,10 +23,8 @@ dataset_physics = xr.open_dataset(file_physics)
 time_slice = 0
 
 def calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon, padding=25):
-    """
-    Calculate a dynamic bounding box based on start and end coordinates.
-    padding: degrees to add around the area (default 5 degrees)
-    """
+    #Calculate a dynamic bounding box based on start and end coordinates.
+    #padding: degrees to add around the area (default 25 degrees)
     min_lon = min(start_lon, end_lon) - padding
     max_lon = max(start_lon, end_lon) + padding
     min_lat = min(start_lat, end_lat) - padding
