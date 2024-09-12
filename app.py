@@ -22,7 +22,7 @@ dataset_physics = xr.open_dataset(file_physics)
 
 time_slice = 0
 
-def calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon, padding=25):
+def calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon, padding=5):
     #Calculate a dynamic bounding box based on start and end coordinates.
     #padding: degrees to add around the area (default 25 degrees)
     min_lon = min(start_lon, end_lon) - padding
@@ -100,6 +100,9 @@ def get_route():
     end_lon = data.get("endLon")
 
     # Calculate dynamic bbox
+    """If code is giving error comment out the below bbox and uncomment this one
+    bbox = ((-180, -90), (180, 90))
+    """
     bbox = calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon)
 
     # Prepare cost matrix based on dynamic bbox
