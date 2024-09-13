@@ -102,10 +102,10 @@ def get_route():
     end_lon = data.get("endLon")
 
     # Calculate dynamic bbox
-    """If code is giving error comment out the below bbox and uncomment this one
+    # If code is giving error comment out the below bbox and uncomment this one
     bbox = ((-180, -90), (180, 90))
-    """
-    bbox = calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon)
+    
+    # bbox = calculate_dynamic_bbox(start_lat, start_lon, end_lat, end_lon)
 
     # Prepare cost matrix based on dynamic bbox
     costs, wave_height = prepare_cost_matrix(bbox)

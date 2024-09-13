@@ -1,0 +1,52 @@
+.heading-filter {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.dropdown-container {
+  margin-top: 1em;
+}
+.dropdown-container select {
+  border: 0 solid#e5e7eb;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  min-height: 2rem;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: inherit;
+}
+.sub-heading {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: rgb(124, 143, 172);
+  margin-bottom: 0.5em;
+}
+.logo {
+  width: 8em;
+  margin-bottom: 1em;
+}
+.route-btn {
+  background-color: rgb(93, 135, 255) !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  margin-top: 2em;
+}
+.filter-btn {
+  border: 0 solid#e5e7eb !important;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+  height: 2rem !important;
+  border-radius: 12px !important;
+  font-size: 0.8em !important;
+  color: inherit !important;
+}
+.input-container {
+  margin-top: 1em;
+}
+.input-container input {
+  height: 2rem !important;
+}
+.input-container span {
+  color: rgb(124, 143, 172);
+}

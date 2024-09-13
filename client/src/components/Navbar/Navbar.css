@@ -1,0 +1,23 @@
+.navbar {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .bars {
+  color: rgb(124, 143, 172);
+  cursor: pointer;
+}
+.dropdown-container-nav select {
+  border: 0 solid#e5e7eb;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  min-height: 2rem;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: inherit;
+}
+.nav-items-container {
+  display: flex;
+  column-gap: 1em;
+}
