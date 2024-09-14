@@ -70,27 +70,6 @@ const LeftSidebar = ({ setGeoData }) => {
     }
   };
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleToggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const userChats = [
-    {
-      name: "Andik Firman",
-      avatar: "https://cdn-icons-png.freepik.com/512/8742/8742495.png",
-    },
-    {
-      name: "Rafiee Rohmat",
-      avatar: "https://cdn-icons-png.freepik.com/512/8742/8742495.png",
-    },
-    {
-      name: "Botak Bersinar",
-      avatar: "https://cdn-icons-png.freepik.com/512/8742/8742495.png",
-    },
-  ];
-
   return (
     <div className="p-4">
       <h1 className="heading-filter">Ship Routing</h1>
@@ -127,46 +106,23 @@ const LeftSidebar = ({ setGeoData }) => {
               <Link to="/history">History</Link>
             </span>
           </div>
-
-          <div className="sidebar-menu-item" onClick={handleToggleDropdown}>
-            <div className="chat-drop-down">
-              <i>
-                <FaCompressAlt />
-              </i>
-              <span>Chat</span>
-            </div>
-
-            <img
-              src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
-              alt=""
-            />
-          </div>
-
-          <div className={`chat-dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
-            {userChats.map((user, index) => (
-              <div key={index} className="chat-user-item">
-                <img
-                  src={user.avatar}
-                  alt={user.name}
-                  className="chat-avatar"
-                />
-                <span>{user.name}</span>
-              </div>
-            ))}
-          </div>
-
           <div className="sidebar-menu-item">
-            <div className="chat-drop-down">
-              <i>
-                <FaMailBulk />
-              </i>
-              <span>Commands</span>
-            </div>
-
-            <img
-              src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
-              alt=""
-            />
+            <i>
+              {" "}
+              <FaCompressAlt />
+            </i>
+            <span>
+              <Link to="/chat">Chat</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
+              <FaMailBulk />
+            </i>
+            <span>
+              <Link to="/commands">Commands</Link>
+            </span>
           </div>
         </div>
       </div>

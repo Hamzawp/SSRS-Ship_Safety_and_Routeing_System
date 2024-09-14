@@ -2,13 +2,14 @@
   position: fixed;
   margin-left: 18vw;
   width: 82vw;
-  background-color: rgb(23 28 35);
+  background-color: rgb(20 26 33);
+  border-bottom: 1px solid rgba(145, 158, 171, 0.08);
   z-index: 9999999;
 }
 .leftSidebar-container {
-  background-color: rgb(23 28 35);
+  background-color: rgb(20 26 33);
   position: fixed;
-  border-right: 1px solid rgb(51, 63, 85);
+  border-right: 1px solid rgba(145, 158, 171, 0.08);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   height: 100vh;

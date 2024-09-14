@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
-import RightSidebar from "../../components/RightSidebar/RightSidebar";
 import "./Dashboard.css";
 import LeafletMap from "../../components/LeafletMap/LeafletMap";
 import Navbar from "../../components/Navbar/Navbar";
+import D3GeoMap from "../../components/D3GeoMap/D3GeoMap";
+import Globe from "../../components/D3GeoMap/D3GeoMap";
 
 const Dashboard = () => {
   const [geoData, setGeoData] = useState(null);
@@ -13,15 +14,16 @@ const Dashboard = () => {
       <div className="navbar-container">
         <Navbar />
       </div>
+
       <div className="leftSidebar-container">
         <LeftSidebar setGeoData={setGeoData} />
       </div>
 
-      {/* <div className="rightSidebar-container">
-        <RightSidebar />
+      {/* <div style={{ marginLeft: "20vw", paddingTop: "4em" }}>
+        <Globe />
       </div> */}
 
-      <div style={{ marginLeft: "20vw", paddingTop: '4em' }}>
+      <div style={{ marginLeft: "20vw", paddingTop: "4em" }}>
         <LeafletMap geoData={geoData} />
       </div>
     </div>

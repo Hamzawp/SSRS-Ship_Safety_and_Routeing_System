@@ -24,11 +24,15 @@ const Navbar = () => {
           <div className="bars">
             <FaBars />
           </div>
-
-          <SOSModal />
         </div>
 
         <div className="nav-items-container">
+          <div style={{ zIndex: "99999999999999999999999999999999999999" }}>
+            <SOSModal />
+          </div>
+        </div>
+
+        {/* <div className="nav-items-container">
           <div className="dropdown-container-nav">
             <select
               className="w-full"
@@ -59,7 +63,7 @@ const Navbar = () => {
               <option value="california">California Current</option>
             </select>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

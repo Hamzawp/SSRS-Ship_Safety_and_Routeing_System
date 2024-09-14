@@ -13,6 +13,7 @@ import {
 } from "@nextui-org/react";
 import { MailIcon } from "./MailIcon.jsx";
 import "./SOSModal.css";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function SOSModal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -22,12 +23,11 @@ export default function SOSModal() {
       <Button
         className="sos-btn"
         onPress={onOpen}
-        color="warning"
         variant="flat"
       >
-        SOS
+        <FaPhoneAlt />
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="bottom">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
         <ModalContent>
           {(onClose) => (
             <>

@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 .navbar .bars {
-  color: rgb(124, 143, 172);
+  color: #919EAB;
   cursor: pointer;
 }
 .dropdown-container-nav select {
