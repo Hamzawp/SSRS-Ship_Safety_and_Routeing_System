@@ -7,3 +7,15 @@
     color: #fff !important;
     background-color: rgb(255 48 48) !important;
 }
+.sos-container {
+    background-color: rgb(20 26 33) !important;
+}
+.curr-lat-log{
+    display: flex;
+    flex-direction: column;
+}
+.curr-lat-log span {
+    font-size: 0.875rem;
+    color: #919eab;
+    margin-bottom: 0.5rem;
+}

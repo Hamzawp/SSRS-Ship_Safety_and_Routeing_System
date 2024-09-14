@@ -150,7 +150,7 @@ const LeftSidebar = ({ setGeoData }) => {
                   alt={user.name}
                   className="chat-avatar"
                 />
-                <span>{user.name}</span>
+                <span><Link to="/chat">{user.name}</Link></span>
               </div>
             ))}
           </div>
@@ -160,7 +160,7 @@ const LeftSidebar = ({ setGeoData }) => {
               <i>
                 <FaMailBulk />
               </i>
-              <span>Commands</span>
+              <span><Link to="/commands">Commands</Link></span>
             </div>
 
             <img
@@ -171,7 +171,7 @@ const LeftSidebar = ({ setGeoData }) => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center flex-col mb-5">
+      {/* <div className="w-full flex justify-center flex-col mb-5">
         <h2 className="heading-menus">FILTERS</h2>
         <div className="dropdown-container">
           <h3 className="sub-heading">Enter the source</h3>
@@ -235,7 +235,7 @@ const LeftSidebar = ({ setGeoData }) => {
         <Button className="route-btn" onClick={handleShowRoute}>
           Show Route
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };

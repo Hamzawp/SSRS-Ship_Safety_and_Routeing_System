@@ -7,11 +7,9 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Checkbox,
-  Input,
-  Link,
+  Textarea,
 } from "@nextui-org/react";
-import { MailIcon } from "./MailIcon.jsx";
+
 import "./SOSModal.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -20,47 +18,34 @@ export default function SOSModal() {
 
   return (
     <div>
-      <Button
-        className="sos-btn"
-        onPress={onOpen}
-        variant="flat"
-      >
+      <Button className="sos-btn" onPress={onOpen} variant="flat">
         <FaPhoneAlt />
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        placement="top-center"
+        backdrop="opaque"
+        className="sos-container"
+      >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-white">SOS</ModalHeader>
               <ModalBody>
-                <Input
-                  autoFocus
-                  endContent={
-                    <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                  }
-                  label="Email"
-                  placeholder="Enter your email"
-                  variant="bordered"
-                />
-                <div className="flex py-2 px-1 justify-between">
-                  <Checkbox
-                    classNames={{
-                      label: "text-small",
-                    }}
-                  >
-                    Remember me
-                  </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
-                  </Link>
+                <div className="curr-lat-log">
+                  <span>Latitude: 28.6354</span>
+                  <span>Longitude: 19.7856</span>
                 </div>
+                <Textarea
+                  label="Description"
+                  placeholder="Enter your description"
+                  className="w-full"
+                />
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="flat" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Sign in
+                <Button color="danger" onPress={onClose}>
+                  Send
                 </Button>
               </ModalFooter>
             </>
