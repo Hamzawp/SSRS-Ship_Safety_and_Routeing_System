@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { Button } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 const Ship = () => {
   const [geoData, setGeoData] = useState(null);
@@ -52,7 +53,7 @@ const Ship = () => {
 
             <div className="arr-dep-container">
               <Button>Past Track</Button>
-              <Button>Route forecast</Button>
+              <Button><Link to='/'>Live Map</Link></Button>
             </div>
           </div>
 

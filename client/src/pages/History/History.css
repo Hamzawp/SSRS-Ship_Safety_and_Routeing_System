@@ -81,3 +81,9 @@
 .accordian-item span {
   color: #919eab !important;
 }
+.pagination-container {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

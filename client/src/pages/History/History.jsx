@@ -6,6 +6,7 @@ import { Select, SelectItem } from "@nextui-org/react";
 import prevRoute from "./prev.json";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Pagination } from "@nextui-org/react";
 
 const animals = [
   { key: "cat", label: "Cat" },
@@ -968,6 +969,10 @@ const History = () => {
             </div>
           </AccordionItem>
         </Accordion>
+
+        <div className="pagination-container">
+          <Pagination isCompact showControls total={10} initialPage={1} color="warning" />
+        </div>
       </div>
     </div>
   );

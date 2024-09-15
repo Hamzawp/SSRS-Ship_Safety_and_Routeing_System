@@ -4,7 +4,7 @@
   width: 82vw;
   background-color: rgb(20 26 33);
   border-bottom: 1px solid rgba(145, 158, 171, 0.08);
-  z-index: 99;
+  z-index: 999999999999999999;
 }
 .leftSidebar-container {
   background-color: rgb(20 26 33);
