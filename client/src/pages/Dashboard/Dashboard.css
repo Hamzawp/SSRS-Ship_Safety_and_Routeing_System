@@ -6,7 +6,7 @@
   border-bottom: 1px solid rgba(145, 158, 171, 0.08);
   z-index: 999999999999999999;
 }
-.leftSidebar-container {
+/* .leftSidebar-container {
   background-color: rgb(20 26 33);
   position: fixed;
   border-right: 1px solid rgba(145, 158, 171, 0.08);
@@ -16,7 +16,7 @@
   width: 18vw;
   overflow-y: scroll;
   scrollbar-width: none;
-}
+} */
 
 .rightSidebar-container {
   position: absolute;

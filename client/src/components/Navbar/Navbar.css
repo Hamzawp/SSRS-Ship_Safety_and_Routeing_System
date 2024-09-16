@@ -19,5 +19,9 @@
 }
 .nav-items-container {
   display: flex;
-  column-gap: 1em;
+  align-items: center;
+  column-gap: 1.5em;
+}
+.fill-current {
+  color: #919EAB;
 }

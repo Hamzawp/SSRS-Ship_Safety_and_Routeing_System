@@ -39,7 +39,7 @@ const ports = [
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
   const [destination, setDestination] = useState(null);
-
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedKeys, setSelectedKeys] = useState(new Set(["wind_speed"]));
 
   const selectedValue = useMemo(
@@ -91,9 +91,22 @@ const LeftSidebar = ({ setGeoData }) => {
     },
   ];
 
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="p-4">
-      <h1 className="heading-filter">Ship Routing</h1>
+    <div className="sidebar-container">
+      <div className="sidebar-header">
+        <h1 className="heading-filter">Ship Routing</h1>
+
+        <img
+          className="right-arrow-sidebar"
+          src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
+          alt=""
+          onClick={toggleSidebar}
+        />
+      </div>
 
       <div className="w-full flex justify-center flex-col mb-5">
         <h2 className="heading-menus">OVERVIEW</h2>
@@ -150,7 +163,9 @@ const LeftSidebar = ({ setGeoData }) => {
                   alt={user.name}
                   className="chat-avatar"
                 />
-                <span><Link to="/chat">{user.name}</Link></span>
+                <span>
+                  <Link to="/chat">{user.name}</Link>
+                </span>
               </div>
             ))}
           </div>
@@ -160,7 +175,9 @@ const LeftSidebar = ({ setGeoData }) => {
               <i>
                 <FaMailBulk />
               </i>
-              <span><Link to="/commands">Commands</Link></span>
+              <span>
+                <Link to="/commands">Commands</Link>
+              </span>
             </div>
 
             <img

@@ -39,8 +39,8 @@ const ports = [
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
   const [destination, setDestination] = useState(null);
-
   const [selectedKeys, setSelectedKeys] = useState(new Set(["wind_speed"]));
+  const [isOpen, setIsOpen] = useState(true);
 
   const selectedValue = useMemo(
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
@@ -70,9 +70,22 @@ const LeftSidebar = ({ setGeoData }) => {
     }
   };
 
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="p-4">
-      <h1 className="heading-filter">Ship Routing</h1>
+    <div className={`sidebar-container ${isOpen ? "open" : "closed"}`}>
+      <div className="sidebar-header">
+        <h1 className="heading-filter">Ship Routing</h1>
+
+        <img
+          className="right-arrow-sidebar"
+          src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
+          alt=""
+          onClick={toggleSidebar}
+        />
+      </div>
 
       <div className="w-full flex justify-center flex-col mb-5">
         <h2 className="heading-menus">OVERVIEW</h2>
