@@ -19,26 +19,6 @@ import {
   FaShip,
 } from "react-icons/fa";
 
-const ports = [
-  { label: "Mumbai", latitude: 18.9402, longitude: 72.8352 },
-  { label: "Chennai", latitude: 13.0827, longitude: 80.2707 },
-  { label: "Kolkata", latitude: 22.5726, longitude: 88.3639 },
-  { label: "Visakhapatnam", latitude: 17.6868, longitude: 83.2185 },
-  { label: "Cochin", latitude: 9.9312, longitude: 76.2673 },
-  { label: "Paradip", latitude: 20.3168, longitude: 86.6101 },
-  { label: "Mangalore", latitude: 12.9141, longitude: 74.856 },
-  { label: "Kandla", latitude: 23.0333, longitude: 70.2167 },
-  { label: "Tuticorin", latitude: 8.7642, longitude: 78.1348 },
-  { label: "Haldia", latitude: 22.0667, longitude: 88.069 },
-  { label: "Ennore", latitude: 13.2416, longitude: 80.3203 },
-  { label: "Port Blair", latitude: 11.6234, longitude: 92.7265 },
-  {
-    label: "Egypt",
-    latitude: -32.0563,
-    longitude: 115.7455,
-  },
-];
-
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
   const [destination, setDestination] = useState(null);
@@ -68,7 +48,6 @@ const LeftSidebar = ({ setGeoData }) => {
       });
 
       const routeData = await response.json();
-      console.log(routeData);
       setGeoData(routeData);
     }
   };

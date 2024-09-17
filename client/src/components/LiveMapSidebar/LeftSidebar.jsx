@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from "react";
-import { Button, Input } from "@nextui-org/react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import Select from "react-select"; // Import react-select
 import {
   Dropdown,
   DropdownTrigger,
@@ -17,30 +18,12 @@ import {
   FaRoute,
   FaShip,
 } from "react-icons/fa";
-
-const ports = [
-  { label: "Mumbai", latitude: 18.9402, longitude: 72.8352 },
-  { label: "Chennai", latitude: 13.0827, longitude: 80.2707 },
-  { label: "Kolkata", latitude: 22.5726, longitude: 88.3639 },
-  { label: "Visakhapatnam", latitude: 17.6868, longitude: 83.2185 },
-  { label: "Cochin", latitude: 9.9312, longitude: 76.2673 },
-  { label: "Paradip", latitude: 20.3168, longitude: 86.6101 },
-  { label: "Mangalore", latitude: 12.9141, longitude: 74.856 },
-  { label: "Kandla", latitude: 23.0333, longitude: 70.2167 },
-  { label: "Tuticorin", latitude: 8.7642, longitude: 78.1348 },
-  { label: "Haldia", latitude: 22.0667, longitude: 88.069 },
-  { label: "Ennore", latitude: 13.2416, longitude: 80.3203 },
-  { label: "Port Blair", latitude: 11.6234, longitude: 92.7265 },
-  {
-    label: "Egypt",
-    latitude: -32.0563,
-    longitude: 115.7455,
-  },
-];
+import portsData from "./ports.json";
 
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
   const [destination, setDestination] = useState(null);
+  const [ports, setPorts] = useState([]);
   const [selectedKeys, setSelectedKeys] = useState(
     new Set(["wind_direction_and_height"])
   );
@@ -50,6 +33,15 @@ const LeftSidebar = ({ setGeoData }) => {
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
     [selectedKeys]
   );
+
+  useEffect(() => {
+    const transformedPorts = portsData.features.map((feature) => ({
+      label: feature.properties.Name,
+      latitude: feature.geometry.coordinates[1],
+      longitude: feature.geometry.coordinates[0],
+    }));
+    setPorts(transformedPorts);
+  }, []);
 
   const handleShowRoute = async () => {
     if (source && destination) {
@@ -82,7 +74,6 @@ const LeftSidebar = ({ setGeoData }) => {
     <div className={`sidebar-container ${isOpen ? "open" : "closed"}`}>
       <div className="sidebar-header">
         <h1 className="heading-filter">Ship Routing</h1>
-
         <img
           className="right-arrow-sidebar"
           src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
@@ -164,40 +155,25 @@ const LeftSidebar = ({ setGeoData }) => {
 
       <div className="w-full flex justify-center flex-col mb-5">
         <h2 className="heading-menus">FILTERS</h2>
+
         <div className="dropdown-container">
           <h3 className="sub-heading">Enter the source</h3>
-          <select
-            className="w-full"
-            onChange={(e) =>
-              setSource(ports.find((port) => port.label === e.target.value))
-            }
-          >
-            <option value="">Select Source</option>
-            {ports.map((port) => (
-              <option key={port.label} value={port.label}>
-                {port.label}
-              </option>
-            ))}
-          </select>
+          <Select
+            options={ports}
+            onChange={(selectedOption) => setSource(selectedOption)}
+            isSearchable
+            placeholder="Select Source"
+          />
         </div>
 
         <div className="dropdown-container">
           <h3 className="sub-heading">Enter the destination</h3>
-          <select
-            className="w-full"
-            onChange={(e) =>
-              setDestination(
-                ports.find((port) => port.label === e.target.value)
-              )
-            }
-          >
-            <option value="">Select Destination</option>
-            {ports.map((port) => (
-              <option key={port.label} value={port.label}>
-                {port.label}
-              </option>
-            ))}
-          </select>
+          <Select
+            options={ports}
+            onChange={(selectedOption) => setDestination(selectedOption)}
+            isSearchable
+            placeholder="Select Destination"
+          />
         </div>
 
         <div className="dropdown-container">
@@ -234,8 +210,12 @@ const LeftSidebar = ({ setGeoData }) => {
               </DropdownItem>
               <DropdownItem key="swell_Wave_data">Swell Wave Data</DropdownItem>
               <DropdownItem key="peak_period">Peak Period</DropdownItem>
-              <DropdownItem key="mean_wave_direction">Mean Wave Direction</DropdownItem>
-              <DropdownItem key="accidents_And_crashes">Accidents and Crashes</DropdownItem>
+              <DropdownItem key="mean_wave_direction">
+                Mean Wave Direction
+              </DropdownItem>
+              <DropdownItem key="accidents_And_crashes">
+                Accidents and Crashes
+              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

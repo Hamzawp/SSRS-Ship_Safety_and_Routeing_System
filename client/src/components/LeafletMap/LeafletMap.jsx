@@ -20,7 +20,7 @@ const LeafletMap = ({ geoData }) => {
     >
       <MapContainer
         center={[20.5937, 78.9629]}
-        zoom={13}
+        zoom={4}
         style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
