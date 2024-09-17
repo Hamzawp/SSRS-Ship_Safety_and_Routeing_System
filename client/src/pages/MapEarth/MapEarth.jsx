@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import LeftSidebar from "../../components/LiveMapSidebar/LeftSidebar";
-import "./Dashboard.css";
-import LeafletMap from "../../components/LeafletMap/LeafletMap";
 import Navbar from "../../components/Navbar/Navbar";
-import MapEarth from "../MapEarth/MapEarth";
 
-const Dashboard = () => {
+const MapEarth = () => {
   const [geoData, setGeoData] = useState(null);
-
   return (
-    <div className="dashboard-container">
+    <>
       <div className="navbar-container">
         <Navbar />
       </div>
@@ -17,12 +13,15 @@ const Dashboard = () => {
       <div className="leftSidebar-container">
         <LeftSidebar setGeoData={setGeoData} />
       </div>
-
       <div style={{ marginLeft: "20vw", paddingTop: "4em" }}>
-        <LeafletMap geoData={geoData} />
+        <iframe
+          src="https://earth.nullschool.net/#current/wind/surface/level/orthographic=-278.28,15.47,1379"
+          width="95%"
+          height={650}
+        />
       </div>
-    </div>
+    </>
   );
 };
 
-export default Dashboard;
+export default MapEarth;

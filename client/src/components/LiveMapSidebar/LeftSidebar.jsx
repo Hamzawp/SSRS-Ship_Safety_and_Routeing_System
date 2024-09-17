@@ -103,6 +103,24 @@ const LeftSidebar = ({ setGeoData }) => {
           <div className="sidebar-menu-item">
             <i>
               {" "}
+              <FaGlobe />
+            </i>
+            <span>
+              <Link to="/curr-map">Current Map</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
+              <FaGlobe />
+            </i>
+            <span>
+              <Link to="/maritime-news">Maritime News</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
               <FaShip />
             </i>
             <span>
@@ -125,7 +143,7 @@ const LeftSidebar = ({ setGeoData }) => {
               <FaCompressAlt />
             </i>
             <span>
-              <Link to="/chat">Chat</Link>
+              <Link to="/radar">Chat</Link>
             </span>
           </div>
           <div className="sidebar-menu-item">

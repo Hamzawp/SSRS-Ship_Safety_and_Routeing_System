@@ -10,9 +10,11 @@ import {
 import "./LeftSidebar.css";
 import {
   FaCompressAlt,
+  FaGitAlt,
   FaGlobe,
   FaHistory,
   FaMailBulk,
+  FaNewspaper,
   FaShip,
 } from "react-icons/fa";
 
@@ -124,6 +126,24 @@ const LeftSidebar = ({ setGeoData }) => {
           <div className="sidebar-menu-item">
             <i>
               {" "}
+              <FaGlobe />
+            </i>
+            <span>
+              <Link to="/curr-map">Current Map</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
+              <FaNewspaper />
+            </i>
+            <span>
+              <Link to="/maritime-news">Maritime News</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
               <FaShip />
             </i>
             <span>
@@ -140,8 +160,28 @@ const LeftSidebar = ({ setGeoData }) => {
               <Link to="/history">History</Link>
             </span>
           </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
+              <FaCompressAlt />
+            </i>
+            <span>
+              <Link to="/radar">Chat</Link>
+            </span>
+          </div>
+          <div className="sidebar-menu-item">
+            <i>
+              {" "}
+              <FaGitAlt />
+            </i>
+            <span>
+              {" "}
+              <Link to="/commands">Commands</Link>
+            </span>
+          </div>
+          
 
-          <div className="sidebar-menu-item" onClick={handleToggleDropdown}>
+          {/* <div className="sidebar-menu-item" onClick={handleToggleDropdown}>
             <div className="chat-drop-down">
               <i>
                 <FaCompressAlt />
@@ -184,75 +224,9 @@ const LeftSidebar = ({ setGeoData }) => {
               src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-droite-grise.png"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
       </div>
-
-      {/* <div className="w-full flex justify-center flex-col mb-5">
-        <h2 className="heading-menus">FILTERS</h2>
-        <div className="dropdown-container">
-          <h3 className="sub-heading">Enter the source</h3>
-          <select
-            className="w-full"
-            onChange={(e) =>
-              setSource(ports.find((port) => port.label === e.target.value))
-            }
-          >
-            <option value="">Select Source</option>
-            {ports.map((port) => (
-              <option key={port.label} value={port.label}>
-                {port.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="dropdown-container">
-          <h3 className="sub-heading">Enter the destination</h3>
-          <select
-            className="w-full"
-            onChange={(e) =>
-              setDestination(
-                ports.find((port) => port.label === e.target.value)
-              )
-            }
-          >
-            <option value="">Select Destination</option>
-            {ports.map((port) => (
-              <option key={port.label} value={port.label}>
-                {port.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="dropdown-container">
-          <h3 className="sub-heading">Select the filters</h3>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button className="capitalize filter-btn">{selectedValue}</Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Multiple selection example"
-              variant="flat"
-              closeOnSelect={false}
-              disallowEmptySelection
-              selectionMode="multiple"
-              selectedKeys={selectedKeys}
-              onSelectionChange={setSelectedKeys}
-            >
-              <DropdownItem key="wind_speed">Wind Speed</DropdownItem>
-              <DropdownItem key="ocean_current">Ocean Current</DropdownItem>
-              <DropdownItem key="date">Date</DropdownItem>
-              <DropdownItem key="single_date">Single Date</DropdownItem>
-              <DropdownItem key="iteration">Iteration</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </div>
-        <Button className="route-btn" onClick={handleShowRoute}>
-          Show Route
-        </Button>
-      </div> */}
     </div>
   );
 };
