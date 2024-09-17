@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css"; 
 
 const LeafletMap = ({ geoData }) => {
   const onEachFeature = (feature, layer) => {

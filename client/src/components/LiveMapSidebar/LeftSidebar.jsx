@@ -13,6 +13,8 @@ import {
   FaGlobe,
   FaHistory,
   FaMailBulk,
+  FaNewspaper,
+  FaRoute,
   FaShip,
 } from "react-icons/fa";
 
@@ -39,7 +41,9 @@ const ports = [
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
   const [destination, setDestination] = useState(null);
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["wind_speed"]));
+  const [selectedKeys, setSelectedKeys] = useState(
+    new Set(["wind_direction_and_height"])
+  );
   const [isOpen, setIsOpen] = useState(true);
 
   const selectedValue = useMemo(
@@ -103,16 +107,16 @@ const LeftSidebar = ({ setGeoData }) => {
           <div className="sidebar-menu-item">
             <i>
               {" "}
-              <FaGlobe />
+              <FaRoute />
             </i>
             <span>
-              <Link to="/curr-map">Current Map</Link>
+              <Link to="/curr-map">Show Route</Link>
             </span>
           </div>
           <div className="sidebar-menu-item">
             <i>
               {" "}
-              <FaGlobe />
+              <FaNewspaper />
             </i>
             <span>
               <Link to="/maritime-news">Maritime News</Link>
@@ -211,11 +215,27 @@ const LeftSidebar = ({ setGeoData }) => {
               selectedKeys={selectedKeys}
               onSelectionChange={setSelectedKeys}
             >
-              <DropdownItem key="wind_speed">Wind Speed</DropdownItem>
+              <DropdownItem key="wind_direction_and_height">
+                Wind Direction and Height
+              </DropdownItem>
               <DropdownItem key="ocean_current">Ocean Current</DropdownItem>
-              <DropdownItem key="date">Date</DropdownItem>
-              <DropdownItem key="single_date">Single Date</DropdownItem>
-              <DropdownItem key="iteration">Iteration</DropdownItem>
+              <DropdownItem key="vessel_build">Vessel Build</DropdownItem>
+              <DropdownItem key="wave_height">Wave Height</DropdownItem>
+              <DropdownItem key="weather_forecast">
+                Weather Forecast
+              </DropdownItem>
+              <DropdownItem key="fuel_efficiency">Fuel Efficiency</DropdownItem>
+              <DropdownItem key="wave_period_At_spectral_peak">
+                Wave Period at Spectral Peak
+              </DropdownItem>
+              <DropdownItem key="stokes_drift">Stokes Drift</DropdownItem>
+              <DropdownItem key="max_min_crest_pea_height">
+                Max/Min Crest Peak Height
+              </DropdownItem>
+              <DropdownItem key="swell_Wave_data">Swell Wave Data</DropdownItem>
+              <DropdownItem key="peak_period">Peak Period</DropdownItem>
+              <DropdownItem key="mean_wave_direction">Mean Wave Direction</DropdownItem>
+              <DropdownItem key="accidents_And_crashes">Accidents and Crashes</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

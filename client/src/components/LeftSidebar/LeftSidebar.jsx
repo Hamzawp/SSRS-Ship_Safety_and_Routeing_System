@@ -15,6 +15,7 @@ import {
   FaHistory,
   FaMailBulk,
   FaNewspaper,
+  FaRoute,
   FaShip,
 } from "react-icons/fa";
 
@@ -126,10 +127,10 @@ const LeftSidebar = ({ setGeoData }) => {
           <div className="sidebar-menu-item">
             <i>
               {" "}
-              <FaGlobe />
+              <FaRoute />
             </i>
             <span>
-              <Link to="/curr-map">Current Map</Link>
+              <Link to="/curr-map">Show Route</Link>
             </span>
           </div>
           <div className="sidebar-menu-item">
