@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LeftSidebar from "../../components/LiveMapSidebar/LeftSidebar";
+import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import Navbar from "../../components/Navbar/Navbar";
 
 const MapEarth = () => {

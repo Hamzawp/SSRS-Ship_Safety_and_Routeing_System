@@ -9,7 +9,7 @@ const Radar = () => {
   const [selectedShip, setSelectedShip] = useState(null);
   const [chatMessages, setChatMessages] = useState([
     { sender: "receiver", message: "Hello there!" },
-    { sender: "sender", message: "Hi! How can I assist you?" },
+    { sender: "sender", message: "Where are you heading towards?" },
   ]);
   const ships = [
     { id: 1, x: 100, y: 150 },

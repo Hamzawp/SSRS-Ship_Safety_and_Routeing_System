@@ -8,22 +8,6 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Pagination } from "@nextui-org/react";
 
-const animals = [
-  { key: "cat", label: "Cat" },
-  { key: "dog", label: "Dog" },
-  { key: "elephant", label: "Elephant" },
-  { key: "lion", label: "Lion" },
-  { key: "tiger", label: "Tiger" },
-  { key: "giraffe", label: "Giraffe" },
-  { key: "dolphin", label: "Dolphin" },
-  { key: "penguin", label: "Penguin" },
-  { key: "zebra", label: "Zebra" },
-  { key: "shark", label: "Shark" },
-  { key: "whale", label: "Whale" },
-  { key: "otter", label: "Otter" },
-  { key: "crocodile", label: "Crocodile" },
-];
-
 const History = () => {
   const [geoData, setGeoData] = useState(null);
   return (
@@ -106,7 +90,7 @@ const History = () => {
 
                 <div className="card-footer">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/7327/7327424.png"
+                    src="https://cdn-icons-png.flaticon.com/512/7327/7327422.png"
                     alt=""
                   />
                   <span>-0.1%</span>
@@ -118,7 +102,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -211,7 +195,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -304,7 +288,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -397,7 +381,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -490,7 +474,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -583,7 +567,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -676,7 +660,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -769,7 +753,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -862,7 +846,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
@@ -955,7 +939,7 @@ const History = () => {
             <div className="prev-map-container">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={4}
                 style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer

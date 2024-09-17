@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./Ship.css";
 import Navbar from "../../components/Navbar/Navbar";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import Mum_Moga from "./Mum_Moga.json";
 
 const Ship = () => {
   const [geoData, setGeoData] = useState(null);
@@ -25,35 +26,37 @@ const Ship = () => {
             <div className="map-container-voyage">
               <MapContainer
                 center={[20.5937, 78.9629]}
-                zoom={13}
+                zoom={2.5}
                 style={{ height: "100%", width: "100%" }}
               >
-                {/* OpenStreetMap (Standard) */}
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
+                <GeoJSON data={Mum_Moga} />
               </MapContainer>
             </div>
             <div className="arr-dep-container">
               <span>Departure from Mumbai</span>
-              <span>Arrival at Cochin</span>
+              <span>Arrival at Mogadishu</span>
             </div>
 
             <div className="arr-dep-container">
               <div className="arr-dep-items1">
-                <span>Actual time of departure:</span>
-                <span>2024-09-03 01:51 (UTC+5)</span>
+                <span>ATA :</span>
+                <span>2024-09-03 13:51 (UTC+5)</span>
               </div>
               <div className="arr-dep-items2">
-                <span>Actual time of departure:</span>
-                <span>2024-09-03 01:51 (UTC+5)</span>
+                <span>ETA:</span>
+                <span>2024-11-03 03.00 (UTC+5)</span>
               </div>
             </div>
 
             <div className="arr-dep-container">
               <Button>Past Track</Button>
-              <Button><Link to='/'>Live Map</Link></Button>
+              <Button>
+                <Link to="/">Live Map</Link>
+              </Button>
             </div>
           </div>
 
@@ -78,7 +81,7 @@ const Ship = () => {
                   <tr>
                     <td>Latitude/Longitude</td>
                     <td>
-                      <span className="upgrade-text">Upgrade to unlock</span>
+                      <span>2.03711/45.34375</span>
                     </td>
                   </tr>
                   <tr>
@@ -173,7 +176,6 @@ const Ship = () => {
                         alt="Cook Is flag"
                         className="flag"
                       />{" "}
-                      Cook Is
                     </td>
                   </tr>
                   <tr>
@@ -203,19 +205,19 @@ const Ship = () => {
                   <tr>
                     <td>Service Status</td>
                     <td>
-                      <span className="upgrade-text">Upgrade to unlock</span>
+                      <span>Done</span>
                     </td>
                   </tr>
                   <tr>
                     <td>Port of Registry</td>
                     <td>
-                      <span className="upgrade-text">Upgrade to unlock</span>
+                      <span>Mumbai</span>
                     </td>
                   </tr>
                   <tr>
                     <td>Year Built</td>
                     <td>
-                      <span className="upgrade-text">Upgrade to unlock</span>
+                      <span>2010</span>
                     </td>
                   </tr>
                 </tbody>

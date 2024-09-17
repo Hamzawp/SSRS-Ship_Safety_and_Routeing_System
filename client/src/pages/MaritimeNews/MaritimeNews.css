@@ -112,7 +112,7 @@
   gap: 1em;
   background-color: rgb(20 26 33);
   padding: 0.2em;
-  width: 6em;
+  width: 10em;
   border-radius: 8px;
 }
 .user-news span {
@@ -171,14 +171,17 @@
   justify-content: space-between;
 }
 .news-categ-card {
-  width: 20em;
+  width: 21em;
   background-color: rgb(20 26 33);
   padding: 1em;
   border-radius: 8px;
   color: #919eab;
+  height: 25em;
 }
 .news-categ-img img {
   border-radius: 8px;
+  height: 10em;
+  width: 100%;
 }
 .news-categ-img {
   margin-bottom: 1rem;

@@ -19,6 +19,7 @@ import {
   FaShip,
 } from "react-icons/fa";
 import portsData from "./ports.json";
+// import { Select, SelectItem } from "@nextui-org/react";
 
 const LeftSidebar = ({ setGeoData }) => {
   const [source, setSource] = useState(null);
@@ -28,6 +29,29 @@ const LeftSidebar = ({ setGeoData }) => {
     new Set(["wind_direction_and_height"])
   );
   const [isOpen, setIsOpen] = useState(true);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const options = [
+    { value: "wind_direction_and_height", label: "Wind Direction and Height" },
+    { value: "ocean_current", label: "Ocean Current" },
+    { value: "vessel_build", label: "Vessel Build" },
+    { value: "wave_height", label: "Wave Height" },
+    { value: "weather_forecast", label: "Weather Forecast" },
+    { value: "fuel_efficiency", label: "Fuel Efficiency" },
+    {
+      value: "wave_period_At_spectral_peak",
+      label: "Wave Period at Spectral Peak",
+    },
+    { value: "stokes_drift", label: "Stokes Drift" },
+    { value: "max_min_crest_pea_height", label: "Max/Min Crest Peak Height" },
+    { value: "swell_Wave_data", label: "Swell Wave Data" },
+    { value: "peak_period", label: "Peak Period" },
+    { value: "mean_wave_direction", label: "Mean Wave Direction" },
+    { value: "accidents_And_crashes", label: "Accidents and Crashes" },
+  ];
+
+  const handleChange = (selectedOptions) => {
+    setSelectedOptions(selectedOptions);
+  };
 
   const selectedValue = useMemo(
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
@@ -178,46 +202,16 @@ const LeftSidebar = ({ setGeoData }) => {
 
         <div className="dropdown-container">
           <h3 className="sub-heading">Select the filters</h3>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button className="capitalize filter-btn">{selectedValue}</Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Multiple selection example"
-              variant="flat"
-              closeOnSelect={false}
-              disallowEmptySelection
-              selectionMode="multiple"
-              selectedKeys={selectedKeys}
-              onSelectionChange={setSelectedKeys}
-            >
-              <DropdownItem key="wind_direction_and_height">
-                Wind Direction and Height
-              </DropdownItem>
-              <DropdownItem key="ocean_current">Ocean Current</DropdownItem>
-              <DropdownItem key="vessel_build">Vessel Build</DropdownItem>
-              <DropdownItem key="wave_height">Wave Height</DropdownItem>
-              <DropdownItem key="weather_forecast">
-                Weather Forecast
-              </DropdownItem>
-              <DropdownItem key="fuel_efficiency">Fuel Efficiency</DropdownItem>
-              <DropdownItem key="wave_period_At_spectral_peak">
-                Wave Period at Spectral Peak
-              </DropdownItem>
-              <DropdownItem key="stokes_drift">Stokes Drift</DropdownItem>
-              <DropdownItem key="max_min_crest_pea_height">
-                Max/Min Crest Peak Height
-              </DropdownItem>
-              <DropdownItem key="swell_Wave_data">Swell Wave Data</DropdownItem>
-              <DropdownItem key="peak_period">Peak Period</DropdownItem>
-              <DropdownItem key="mean_wave_direction">
-                Mean Wave Direction
-              </DropdownItem>
-              <DropdownItem key="accidents_And_crashes">
-                Accidents and Crashes
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          <Select
+            isMulti
+            options={options}
+            value={selectedOptions}
+            onChange={handleChange}
+            closeMenuOnSelect={false}
+            placeholder="Select Filters"
+            className="multi-select-dropdown"
+            classNamePrefix="select"
+          />
         </div>
         <Button className="route-btn" onClick={handleShowRoute}>
           Show Route

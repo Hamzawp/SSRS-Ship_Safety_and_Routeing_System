@@ -8,30 +8,31 @@ const Commands = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
     {
-      sender: "Andik Firman",
-      time: "12:54",
-      text: "Hi @everyone Ada member baru lagii nii, namanya Ahsan Oiyaa, salam kenal Ahsan, aku Andik aku dari Ngawi hehe 😊",
+      sender: "Headquarters",
+      time: "13:00",
+      text: "Hello @everyone, the headquarters has requested an update on the ship's status. Please ensure all systems are running smoothly.",
       type: "left",
     },
     {
       sender: "You",
-      time: "12:55",
-      text: "Hi @everyone Salam kenal yaa, aku Ahsan pratama dari Solo 🇮🇩 btw ini group buat apaan yak?",
+      time: "13:01",
+      text: "Hi @Headquarters, all systems are functioning normally. The ship is currently docked at the harbor awaiting further instructions.",
       type: "right",
     },
     {
-      sender: "Rafiee Rohmat",
-      time: "12:57",
-      text: "Hi @ahsanpratamaa salam kenal juga, aku Rafie. Oiyaa, aku dari Ngawi hehe 😊",
+      sender: "Headquarters",
+      time: "13:03",
+      text: "Just a reminder, the next briefing from headquarters will be at 15:00. Make sure to review the latest mission updates before then.",
       type: "left",
     },
     {
       sender: "You",
-      time: "12:57",
-      text: "Hi @ahsanpratamaa salam kenal juga, aku Rafie. Oiyaa, aku dari Ngawi hehe 😊",
+      time: "13:05",
+      text: "Got it @Headquarters. I’ll review the updates and be ready for the briefing.",
       type: "right",
     },
   ]);
+
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -64,7 +65,7 @@ const Commands = () => {
             </div>
 
             <div className="chat-name-header">
-              <h2>Port Blair Ship</h2>
+              <h2>Headquater</h2>
             </div>
           </div>
 

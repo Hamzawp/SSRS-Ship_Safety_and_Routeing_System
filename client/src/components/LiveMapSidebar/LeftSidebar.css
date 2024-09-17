@@ -88,6 +88,7 @@
 }
 .dropdown-container {
   margin-top: 0.5em;
+  /* z-index: 99; */
 }
 .dropdown-container select {
   border: 0 solid#e5e7eb;
