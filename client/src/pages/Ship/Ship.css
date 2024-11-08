@@ -1,0 +1,126 @@
+.ship-container {
+  margin-left: 20vw;
+  padding-top: 6em;
+  display: flex;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+.currVoyage-container {
+  background-color: #1c252e;
+  color: #ffffff;
+  background-image: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 12px 24px -4px;
+  z-index: 0;
+  width: 45vw;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.ship-heading {
+  font-size: 1rem;
+  color: #919eab;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.map-container-voyage {
+  height: 30vh;
+}
+.arr-dep-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.arr-dep-container span {
+  color: rgb(255 48 48);
+}
+.arr-dep-items1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.arr-dep-items2 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.arr-dep-items1 span,
+.arr-dep-items2 span {
+  color: #919eab;
+  font-size: 0.875rem;
+}
+.arr-dep-container button {
+  background-color: rgb(255 48 48) !important;
+  color: #fff !important;
+}
+.summary-container {
+  background-color: #1c252e;
+  color: #ffffff;
+  background-image: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 12px 24px -4px;
+  z-index: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 30vw;
+}
+.summary-content {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.summary-content h3 {
+  color: #919eab;
+  margin-bottom: 0.2rem;
+}
+.summary-content p {
+  color: #919eab;
+  font-size: 0.875rem;
+}
+.left-ship-container .general-container {
+  width: 45vw;
+}
+.general-container {
+  background-color: #1c252e;
+  color: #ffffff;
+  background-image: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 12px 24px -4px;
+  z-index: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 30vw;
+  margin-top: 1em;
+}
+.general-img img {
+  width: 100%;
+  height: 15em;
+  margin-top: 1rem;
+}
+.vessel-info-container {
+  width: 100%;
+  /* max-width: 400px; */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+.vessel-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.vessel-info-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+.vessel-info-table td:first-child {
+  font-weight: bold;
+}
+.flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+}
+.upgrade-text {
+  color: #007bff;
+  cursor: pointer;
+  font-style: italic;
+}
