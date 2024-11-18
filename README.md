@@ -77,7 +77,7 @@
 
 ## Demonstration
 
-[![Watch the video](https://github.com/user-attachments/assets/58f75ece-e0a1-425f-a1f4-1edfd754fb1c)](https://www.youtube.com/watch?v=k4cO_Zhvkqg)
+https://github.com/user-attachments/assets/9abfba73-2522-4a79-a0e7-a7546574e381
 
 <br />
 
