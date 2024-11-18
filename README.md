@@ -45,7 +45,7 @@
 
 ## Architecture
 
-<img src="./client/src/assets/architecture.jpg" width="100%" />
+<img src="./client/public/architecture.jpg" width="100%" />
 <br />
 
 ## Impacts and Benefits
@@ -81,7 +81,7 @@
 
 <br />
 
-### Technologies Used
+## Technologies Used
 
 - Frontend
   - React 
