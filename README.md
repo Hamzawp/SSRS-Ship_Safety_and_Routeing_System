@@ -108,7 +108,7 @@ Development of a versatile algorithm for optimal ship routing in the Indian Ocea
 
 ## Demonstration
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v=k4cO_Zhvkqg)
+[![Watch the video](https://github.com/user-attachments/assets/58f75ece-e0a1-425f-a1f4-1edfd754fb1c)](https://www.youtube.com/watch?v=hkY5oynES-s)
 
 <br />
 
