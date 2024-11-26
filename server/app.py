@@ -13,9 +13,9 @@ def get_closest(array, value):
     return np.abs(array - value).argmin()
 
 
-path = "data\GLOBAL_ANALYSISFORECAST_WAV_001_027"
+path = "..\data\GLOBAL_ANALYSISFORECAST_WAV_001_027"
 file_waves = os.path.join(path, "mfwamglocep_2024082000_R20240821_00H.nc")
-path_physics = "data\GLOBAL_ANALYSISFORECAST_PHY_001_024"
+path_physics = "..\data\GLOBAL_ANALYSISFORECAST_PHY_001_024"
 file_physics = os.path.join(
     path_physics, "glo12_rg_1d-m_20240820-20240820_3D-uovo_hcst_R20240828.nc"
 )
