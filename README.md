@@ -75,9 +75,51 @@
 4. Operational Efficiency: Real-time ocean data ensures optimal routing and minimizes delays, while customizable routes improve flexibility for different vessel types.
 </details>
 
-## Demonstration
+## Explaination
 
 https://github.com/user-attachments/assets/9abfba73-2522-4a79-a0e7-a7546574e381
+
+<br />
+
+## Demonstration
+
+<p>Live Map Page</p>
+
+![image](https://github.com/user-attachments/assets/68c2f1ea-1302-449e-9940-20efa28aae95)
+
+<br />
+
+<p>Show Route Page</p>
+
+![image](https://github.com/user-attachments/assets/a97ef391-35d8-4281-8bde-e166282da452)
+
+<br />
+
+<p>Maritime News Page</p>
+
+![image](https://github.com/user-attachments/assets/313cd068-38ca-49b5-86ea-f063e90e7c09)
+
+![image](https://github.com/user-attachments/assets/3b67dfeb-179f-496f-a874-c6b1723b0588)
+
+<br />
+
+<p>Ship Details Page</p>
+
+![image](https://github.com/user-attachments/assets/5b9c959d-12f8-4bd6-aec8-0dedb1dae540)
+
+<br />
+
+<p>Past History Page</p>
+
+![image](https://github.com/user-attachments/assets/5cb13583-f0c4-410f-8d44-ad92b9882ce6)
+
+![image](https://github.com/user-attachments/assets/cffafda3-a3c2-447a-940f-a96cf9d0c7f9)
+
+<br />
+
+<p>Commands Page</p>
+
+![image](https://github.com/user-attachments/assets/3d808f4b-66ad-4cda-8bb5-a2ddac113b19)
 
 <br />
 
