@@ -91,7 +91,7 @@ https://github.com/user-attachments/assets/9abfba73-2522-4a79-a0e7-a7546574e381
 
 <p>Show Route Page</p>
 
-![image](https://github.com/user-attachments/assets/a97ef391-35d8-4281-8bde-e166282da452)
+![image](https://github.com/user-attachments/assets/e586ec8a-c2dc-4987-9c9a-b469da17e626)
 
 <br />
 
